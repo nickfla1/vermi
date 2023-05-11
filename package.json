@@ -12,7 +12,7 @@
   "author": "Flavio (nickfla1) Lanternini Strippoli",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "devDependencies": {
     "husky": "^8.0.3",
