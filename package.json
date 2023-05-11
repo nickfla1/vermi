@@ -1,0 +1,21 @@
+{
+  "name": "vermi",
+  "version": "1.0.0",
+  "description": "bare-bones and flexible versioning tool for javascript",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "prepare": "husky install",
+    "postinstall": "husky install"
+  },
+  "keywords": [],
+  "author": "Flavio (nickfla1) Lanternini Strippoli",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "standard": "^17.0.0"
+  }
+}
