@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,4 +24,3 @@ jobs:
         cache: 'pnpm'
     - run: pnpm install --frozen-lockfile
     - run: pnpm lint
-    - run: pnpm test
