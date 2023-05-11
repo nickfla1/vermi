@@ -16,7 +16,9 @@ program
       })
     } catch (error) {
       logger.error(error.toString())
+      process.exit(1)
     }
   })
+  .showHelpAfterError()
 
 program.parse(process.argv)
