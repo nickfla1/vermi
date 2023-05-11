@@ -1,6 +1,6 @@
 {
   "name": "vermi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "bare-bones and flexible versioning tool for javascript",
   "homepage": "https://github.com/nickfla1/vermi#readme",
   "repository": {
