@@ -4,7 +4,7 @@
  * @property {string|null} packageDir
  */
 
-const { SUPPORTED_VERSION_STRATEGIES } = require('../constants')
+const { InvalidStrategyError } = require('../errors')
 const { readPackageJson, savePackageJson } = require('../utils/package-json')
 const { versionBump, validateBumpStrategy } = require('../utils/semver')
 
@@ -12,13 +12,11 @@ const { versionBump, validateBumpStrategy } = require('../utils/semver')
  * Version-bumps a JavaScript package.
  *
  * @param {Options} options
- * @returns {Promise<void>}
+ * @returns {Promise<void>} Returns true if the operation was successful
  */
 async function version (options) {
   if (!validateBumpStrategy(options.strategy)) {
-    // TODO: proper logging
-    console.log('invalid strategy, supported', SUPPORTED_VERSION_STRATEGIES)
-    return
+    throw new InvalidStrategyError(options.strategy)
   }
 
   const pkgJson = await readPackageJson(options.packageDir)
@@ -27,6 +25,8 @@ async function version (options) {
   pkgJson.version = bumpedVersion
 
   await savePackageJson(pkgJson, options.packageDir)
+
+  return true
 }
 
 module.exports = version

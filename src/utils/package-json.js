@@ -3,6 +3,8 @@ const fs = require('fs/promises')
 /** @type {import('path')} */
 const path = require('path')
 
+const { FileNotFoundError } = require('../errors')
+
 /**
  * @typedef {object} MetaPackageJson
  * @property {string} version
@@ -12,18 +14,20 @@ const path = require('path')
  * Finds and parses a package.json from a directory.
  *
  * @param {string|null} dir Directory where the package.json should be found, defaults to 'process.cwd()'
- * @returns {Promise<MetaPackageJson|null>} Either the parsed package.json file or null if not found
+ * @returns {Promise<MetaPackageJson>} The parsed package.json file
  */
 async function readPackageJson (dir = process.cwd()) {
-  try {
-    const content = await fs.readFile(path.join(dir, 'package.json'))
+  const filepath = path.join(dir, 'package.json')
 
+  try {
+    const content = await fs.readFile(filepath)
     return JSON.parse(content.toString())
   } catch (error) {
-    // TODO: use proper logger
-    console.error(error)
+    if (error.code === 'ENOENT') {
+      throw new FileNotFoundError(filepath)
+    }
 
-    return null
+    throw error
   }
 }
 

@@ -1,5 +1,6 @@
 const semver = require('semver')
 const { SUPPORTED_VERSION_STRATEGIES } = require('../constants')
+const { VermiError } = require('../errors')
 
 /**
  * Bumps a version using a versioning strategy.
@@ -11,7 +12,7 @@ const { SUPPORTED_VERSION_STRATEGIES } = require('../constants')
 function versionBump (originalVersion, strategy) {
   const newVersion = semver.inc(originalVersion, strategy)
   if (!newVersion) {
-    // TODO: handle error
+    throw new VermiError(`unexpected. could not bump version '${originalVersion}'`)
   }
 
   return newVersion
