@@ -11,7 +11,8 @@
   "bin": "./index.js",
   "scripts": {
     "lint": "standard",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bump": "node index.js version"
   },
   "keywords": [],
   "author": "Flavio (nickfla1) Lanternini Strippoli",
