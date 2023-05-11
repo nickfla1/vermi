@@ -32,7 +32,7 @@ You can work around this limitation by installing Vermi globally and running it 
 ### Version bump
 
 ```sh
-npx vermi version minor
+npx vermi version <strategy>
 ```
 
 Supported strategies are `patch`, `minor`, `major` and `prerelease`.
