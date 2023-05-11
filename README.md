@@ -8,6 +8,8 @@ A bare-bone and flexible versioning tool for JavaScript.
 
 ## Installation
 
+Vermi can be either installed globally or locally as a dev dependency.
+
 ```sh
 npm install vermi -g
 npm install vermi --save-dev
@@ -27,4 +29,15 @@ You can work around this limitation by installing Vermi globally and running it 
 
 ## Usage
 
-**TBD**
+### Version bump
+
+```sh
+npx vermi version minor
+```
+
+Supported strategies are `patch`, `minor`, `major` and `prerelease`.
+
+> Vermi uses is powered by the [semver] package and follows [SemVer][semver-specs] specifications.
+
+[semver]: https://www.npmjs.com/package/semver
+[semver-specs]: https://semver.org/
