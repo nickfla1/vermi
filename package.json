@@ -1,6 +1,6 @@
 {
   "name": "vermi",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "bare-bones and flexible versioning tool for javascript",
   "main": "index.js",
   "scripts": {
