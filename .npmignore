@@ -3,5 +3,9 @@
 .github/
 .husky/
 .vscode/
+
+# tests
 .nyc_output/
 coverage/
+coverage-map.js
+src/**/*.test.js
