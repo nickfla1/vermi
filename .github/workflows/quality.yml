@@ -24,3 +24,5 @@ jobs:
         cache: 'pnpm'
     - run: pnpm install --frozen-lockfile
     - run: pnpm lint
+    - run: pnpm run test --coverage-report=cobertura
+    - uses: codecov/codecov-action@v3
