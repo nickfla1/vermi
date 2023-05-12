@@ -38,5 +38,5 @@ jobs:
           node-version: 20.x
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run test --coverage-report=cobertura
+      - run: pnpm run test --coverage-report=json
       - uses: codecov/codecov-action@v3
