@@ -25,8 +25,6 @@ async function version (options) {
   pkgJson.version = bumpedVersion
 
   await savePackageJson(pkgJson, options.packageDir)
-
-  return true
 }
 
 module.exports = version
