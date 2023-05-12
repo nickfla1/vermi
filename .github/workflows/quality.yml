@@ -25,3 +25,5 @@ jobs:
     - run: pnpm install --frozen-lockfile
     - run: pnpm lint
     - run: pnpm run test
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
