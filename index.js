@@ -1,13 +1,9 @@
-const { Command } = require('commander')
-const { name, version } = require('./package.json')
+const version = require('./src/app/version')
+const errors = require('./src/errors')
 
-const program = new Command()
+const vermi = {
+  errors,
+  version
+}
 
-program
-  .name(name)
-  .version(version)
-  .command('version', 'version bump')
-  .executableDir('src/commands/')
-  .showHelpAfterError()
-
-program.parse(process.argv)
+module.exports = vermi
