@@ -7,9 +7,9 @@
     "type": "git",
     "url": "https://github.com/nickfla1/vermi.git"
   },
-  "main": "main.js",
+  "main": "index.js",
   "types": "index.d.ts",
-  "bin": "./main.js",
+  "bin": "./cli.js",
   "scripts": {
     "lint": "standard",
     "test": "tap",
