@@ -14,7 +14,7 @@
     "lint": "standard",
     "test": "tap",
     "prepare": "husky install",
-    "bump": "node main.js version"
+    "bump": "node cli.js version"
   },
   "keywords": [],
   "author": "Flavio (nickfla1) Lanternini Strippoli",
