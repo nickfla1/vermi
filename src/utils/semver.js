@@ -6,7 +6,7 @@ const { VermiError } = require('../errors')
  * Bumps a version using a versioning strategy.
  *
  * @param {string} originalVersion Raw version found in the package.json
- * @param {semver.ReleaseType} strategy Versioning strategy used to bump the original version
+ * @param {import('../../index').VersionStrategy} strategy Versioning strategy used to bump the original version
  * @returns {string} Original version after bump
  */
 function versionBump (originalVersion, strategy) {

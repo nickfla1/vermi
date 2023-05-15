@@ -6,15 +6,10 @@ const path = require('path')
 const { FileNotFoundError } = require('../errors')
 
 /**
- * @typedef {object} MetaPackageJson
- * @property {string} version
- */
-
-/**
  * Finds and parses a package.json from a directory.
  *
  * @param {string|null} dir Directory where the package.json should be found, defaults to 'process.cwd()'
- * @returns {Promise<MetaPackageJson>} The parsed package.json file
+ * @returns {Promise<import('../../index').MetaPackageJson>} The parsed package.json file
  */
 async function readPackageJson (dir = process.cwd()) {
   const filepath = path.join(dir, 'package.json')
@@ -34,7 +29,7 @@ async function readPackageJson (dir = process.cwd()) {
 /**
  * Saves a package.json object as a file.
  *
- * @param {MetaPackageJson} metaPkg package.json to save
+ * @param {import('../../index').MetaPackageJson} metaPkg package.json to save
  * @param {string} dir Directory where the package.json will be saved, defaults to 'process.cwd()'
  * @returns {Promise<void>}
  */
