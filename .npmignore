@@ -9,3 +9,6 @@
 coverage/
 coverage-map.js
 src/**/*.test.js
+
+# examples
+examples/

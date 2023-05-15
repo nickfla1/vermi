@@ -1,9 +1,3 @@
-/**
- * @typedef {object} Options
- * @property {string} strategy
- * @property {string|null} packageDir
- */
-
 const { InvalidStrategyError } = require('../errors')
 const { readPackageJson, savePackageJson } = require('../utils/package-json')
 const { versionBump, validateBumpStrategy } = require('../utils/semver')
@@ -11,7 +5,7 @@ const { versionBump, validateBumpStrategy } = require('../utils/semver')
 /**
  * Version-bumps a JavaScript package.
  *
- * @param {Options} options
+ * @param {import('../../index').VersionOptions} options
  * @returns {Promise<void>} Returns true if the operation was successful
  */
 async function version (options) {

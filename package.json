@@ -8,12 +8,13 @@
     "url": "https://github.com/nickfla1/vermi.git"
   },
   "main": "index.js",
-  "bin": "./index.js",
+  "types": "index.d.ts",
+  "bin": "./cli.js",
   "scripts": {
     "lint": "standard",
     "test": "tap",
     "prepare": "husky install",
-    "bump": "node index.js version"
+    "bump": "node main.js version"
   },
   "keywords": [],
   "author": "Flavio (nickfla1) Lanternini Strippoli",
@@ -35,5 +36,10 @@
   "tap": {
     "check-coverage": true,
     "coverage-map": "coverage-map.js"
+  },
+  "standard": {
+    "ignore": [
+      "index.d.ts"
+    ]
   }
 }

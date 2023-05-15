@@ -32,6 +32,8 @@ You can work around this limitation by installing Vermi globally and running it 
 
 ### Version bump
 
+#### As CLI
+
 ```sh
 npx vermi version <strategy>
 ```
@@ -42,3 +44,25 @@ Supported strategies are `patch`, `minor`, `major` and `prerelease`.
 
 [semver]: https://www.npmjs.com/package/semver
 [semver-specs]: https://semver.org/
+
+#### As a library
+
+```js
+const vermi = require('vermi')
+
+// ...
+
+try {
+    vermi.version({
+    strategy: 'minor',
+    packageDir: './my/subfolder/',
+    })
+} catch (error) {
+  if (error instanceof vermi.errors.VermiError) {
+    // handle error
+  }
+  
+  // ...
+}
+```
+
