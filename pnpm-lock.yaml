@@ -9,8 +9,8 @@ dependencies:
     specifier: ^4.1.2
     version: 4.1.2
   commander:
-    specifier: ^10.0.1
-    version: 10.0.1
+    specifier: ^12.0.0
+    version: 12.0.0
   semver:
     specifier: ^7.5.0
     version: 7.5.2
@@ -804,9 +804,9 @@ packages:
       delayed-stream: 1.0.0
     dev: true
 
-  /commander@10.0.1:
-    resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
-    engines: {node: '>=14'}
+  /commander@12.0.0:
+    resolution: {integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==}
+    engines: {node: '>=18'}
     dev: false
 
   /commondir@1.0.1:
